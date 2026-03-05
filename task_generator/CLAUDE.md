@@ -73,7 +73,8 @@ When generating a task ticket, always include these sections in order:
 1. **Summary** - A clear, prefixed title (e.g., `[Data] Build Dashboard for...`, `[Eng] Implement...`)
 2. **Overview** - One-to-two paragraph description of what needs to be built and why
 3. **Why This Matters** - Business justification for the work
-4. **Acceptance Criteria** - Checklist of specific, testable conditions that define "done"
+4. **High-Level Approach** - A brief technical or strategic approach outlining how the team should tackle this work. Include key architecture decisions, suggested implementation steps, or recommended tools/frameworks without being overly prescriptive.
+5. **Acceptance Criteria** - Checklist of specific, testable conditions that define "done"
 
 ### Optional Sections (include when relevant):
 - **Dependencies** - What must exist before this work can begin
@@ -137,6 +138,7 @@ When generating a task ticket, always include these sections in order:
 **ALWAYS:**
 - Include an **Overview** section with a link to the source document
 - Include a **Why This Matters** section connecting work to business outcomes
+- Include a **High-Level Approach** section outlining the recommended implementation strategy
 - Include **Acceptance Criteria** as a testable checklist
 - Prefix the summary with the target team tag (e.g., `[Data]`, `[Eng]`)
 - Link back to the source Notion doc or metric sheet

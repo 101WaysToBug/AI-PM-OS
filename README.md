@@ -1,4 +1,4 @@
-# Wati PM OS
+# AI PM OS
 
 AI-powered tools that turn a Product Manager into an AI-Assisted Product Manager. Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code), these tools automate repetitive PM workflows — from generating analytics metric sheets to drafting JIRA/YouTrack tickets — so PMs can focus on strategy instead of formatting.
 

@@ -49,6 +49,30 @@ claude
 
 Tickets are always created as **drafts first** so the PM can review before sharing with the team.
 
+### 3. Nugget Synthesizer
+
+Transforms raw user feedback — support tickets, meeting notes, survey responses, and sales notes — into structured **insight reports** with cross-source analysis.
+
+**What it generates:**
+- **Top Pain Points** — ranked by cross-source frequency with supporting quotes
+- **Demand Data** — survey results segmented by role
+- **Competitive Intelligence** — lost deals, competitors, and revenue impact
+- **Use Cases** — support ticket themes categorized by scenario
+- **Feature Requests** — prioritized by impact vs. effort
+- **Recommended Next Steps** — specific, actionable recommendations
+
+**How it works:** Four parallel agents (Meeting Notes, Survey, Support, Sales) each produce a persisted analysis file, then a consolidation step merges all four into one unified synthesis.
+
+**Usage:**
+```bash
+cd nugget-synthesizer
+claude
+# Add feedback files to source directories, then ask:
+# "Synthesize the feedback on WhatsApp Calling"
+```
+
+Output is saved to `insights/` — 4 agent analyses + 1 final synthesis report.
+
 ## Workflow
 
 ```
@@ -62,6 +86,14 @@ User Stories / PRD
         |
         v
    PM Review --> Publish to Team
+
+User Feedback (tickets, notes, surveys, sales)
+        |
+        v
+[Nugget Synthesizer] --> insights/TOPIC-synthesis.md
+        |
+        v
+   PM Review --> Inform Roadmap
 ```
 
 ## Integrations
@@ -76,14 +108,37 @@ User Stories / PRD
 - (Optional) Notion MCP configured for fetching source documents
 - (Optional) YouTrack MCP configured for ticket creation
 
-## Customization
+## Setting Up Your Company Context
 
-Both tools are driven by `CLAUDE.md` instruction files. You can adapt them to your own product by editing:
+All tools load shared context from a `company_context/` folder at the root level. This keeps company, persona, and product information in one place instead of duplicating it across every tool's `CLAUDE.md`.
 
-- **Product context** — company description, capabilities, stage
-- **User personas** — names, roles, pain points, priorities
+```
+company_context/
+├── company.md    # Company overview, stage, capabilities, your role
+├── persona.md    # User personas with roles, pain points, and quotes
+└── product.md    # Deep-dive on the feature(s) you own as a PM
+```
+
+**To adapt AI PM OS to your own company:**
+
+1. **Create `company_context/company.md`** — Describe your company: what it does, core platform capabilities, your role, company stage (funding, ARR, team size, customer count).
+
+2. **Create `company_context/persona.md`** — Define 4-6 user personas relevant to your product area. For each persona include: role, company size, what they care about, pain points, and a representative quote.
+
+3. **Create `company_context/product.md`** — Document the specific feature(s) you own: capabilities, user flows, restrictions, pricing, analytics, and key use cases. Source this from your product's support docs, help center, or internal specs.
+
+4. **Each tool's `CLAUDE.md` loads this context automatically** at the start of every session. The instruction at the top of each `CLAUDE.md` tells Claude Code to read all three files before beginning any task:
+
+   > Before starting any task, load the company context from `../company_context/company.md`, `../company_context/persona.md`, and `../company_context/product.md`.
+
+## Further Customization
+
+Each tool's `CLAUDE.md` file controls its specific behavior. You can adapt:
+
 - **Segmentation dimensions** — plan tiers, ACV bands, regions
 - **Writing style** — tone, formatting rules, terminology
+- **Output structure** — sections, table formats, report templates
+- **Immutable rules** — guardrails for what the tool should always/never do
 
 ## License
 

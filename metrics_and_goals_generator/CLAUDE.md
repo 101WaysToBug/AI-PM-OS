@@ -1,70 +1,12 @@
 # Ticket Composer - Feature Metric Sheet Generator
 
+> **Before starting any task, load the company context from ****`../company_context/company.md`****, ****`../company_context/persona.md`****, and ****`../company_context/product.md`****.**
+
 ## What This Project Does
 
 Ticket Composer is a PM tool that generates **feature metric sheets** - structured analytics tracking documents for new product features. Given user stories and feature specs, it produces a complete metric sheet containing adoption metrics, volume/usage metrics, engagement metrics, and events to instrument.
 
 **Primary Output:** Metric tracking tickets that engineering and data teams use to instrument analytics for new features. All generated metric sheets must always be saved to the `metrics/` subdirectory.
-
-## Product Context
-
-**What is Wati?**
-Wati is the #1 end-to-end WhatsApp API solution for SMBs, providing a low-code customer engagement SaaS platform built on the WhatsApp Business API. Wati empowers 8,000+ businesses across 100+ countries to deliver personalized, real-time conversations at scale.
-
-**Core Platform Capabilities:**
-- **WhatsApp Business Calling** - Voice calls directly within WhatsApp Business workflows, no app-switching required. Agents place calls from the chat dashboard for consultations, deal closures, and complex issue resolution.
-- **Voice AI (Astra)** - AI agent that qualifies leads 24/7, handles technical support via WhatsApp Calling, and routes queries for instant resolution with contextual intelligence.
-- **No-Code Chatbots** - AI-powered, human-like bots for every use case (FAQ handling, lead capture, broadcast campaigns).
-- **Unified Inbox** - Manage WhatsApp, website chat, Instagram, Facebook, SMS, and calls from one dashboard.
-- **Broadcast & Campaigns** - Segmented promotional announcements and personalized outreach at scale.
-
-**Your Role:**
-Product Manager responsible for WhatsApp Business Calling and Voice AI
-
-**Company Stage:**
-- Series B startup ($23M round led by Tiger Global, with Sequoia Capital India and DST Global Partners)
-- $35M total raised
-- 150+ employees
-- Growing ARR (crossed $9.6M in 2024) with current ARR at $25M
-- 15,000+ active business customers across 100+ countries
-
-## User Personas
-
-**Priya - Marketing Manager (D2C / E-commerce)**
-- Role: Head of Marketing at a mid-size D2C brand (50-200 employees)
-- Cares about: Broadcast campaigns, customer re-engagement, conversion rates, ROI on WhatsApp spend
-- Pain points: Low open rates on email, can't personalize outreach at scale, no visibility into campaign performance
-- Quote: "I need to reach my customers where they already are - on WhatsApp - and know exactly what's working."
-
-**Rahul - Sales Director (SMB)**
-- Role: Sales lead at a growing services company (20-80 employees)
-- Cares about: Lead qualification speed, WhatsApp calling for high-touch sales, pipeline visibility, CRM integration
-- Pain points: Leads go cold before the team responds, reps juggle multiple apps, no call analytics
-- Quote: "If I can't call a hot lead directly from the chat within seconds, I've already lost them."
-
-**Anita - Customer Support Lead**
-- Role: Head of Support at an e-commerce or SaaS company (100-500 employees)
-- Cares about: First-response time, AI-powered auto-resolution, ticket deflection, CSAT scores
-- Pain points: Overwhelming ticket volume, repetitive FAQs draining agent time, no 24/7 coverage
-- Quote: "Our customers expect instant answers on WhatsApp. We can't scale support by just hiring more agents."
-
-**David - Business Owner / Founder (Small Business)**
-- Role: Founder or CEO of a small business (5-30 employees)
-- Cares about: Easy setup (no-code), affordability, all-in-one platform, quick time-to-value
-- Pain points: Too many disconnected tools, no technical team to build integrations, limited budget
-- Quote: "I just want one tool that lets me message, call, and automate - without needing a developer."
-
-**Neha - Sales Executive (IC)**
-- Role: Individual sales rep at an SMB or mid-market company, handling 50-100+ leads daily
-- Cares about: Fast lead response, click-to-call from WhatsApp chat, conversation history at a glance, quick template replies
-- Pain points: Switching between CRM, phone dialer, and WhatsApp; losing context mid-conversation; no way to prioritize hot leads in the inbox
-- Quote: "By the time I copy a number, open the dialer, and call - the lead has already gone to a competitor."
-
-**Vijay - Customer Support Agent (IC)**
-- Role: Frontline support agent handling 40-60 WhatsApp conversations per shift
-- Cares about: Canned responses, AI-suggested replies, easy ticket escalation, call handoff for complex issues
-- Pain points: Repetitive queries eating up time, no AI assistance for drafting replies, manually tagging and routing conversations
-- Quote: "I answer the same 10 questions a hundred times a day. If the bot handled those, I could actually solve the hard problems."
 
 ## Metric Sheet Structure
 
@@ -90,8 +32,8 @@ When generating a feature metric sheet, always include these sections in order:
 
 **Segmentation (always include):**
 - **Plan Type**: Growth / Pro / Business / Enterprise
-- **ACV Band**: $0-5K, $5K-15K, $15K-50K, $50K+
-- **Region**: APAC, EMEA, LATAM, NA
+- **ACV Band**: $0–1K, $1K–3K, $3K–5K, $5K-10K, $10K+
+- **Region**: India, ROW, LATAM, GCR, Europe
 - **Timestamp**: Daily, weekly, monthly roll-ups
 
 **Content Rules:**

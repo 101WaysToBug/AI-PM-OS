@@ -73,25 +73,14 @@ claude
 
 Output is saved to `insights/` — 4 agent analyses + 1 final synthesis report.
 
-### 4. Communication Styles
+## Companion Skills
 
-Transforms any content (research findings, feature updates, status reports) into **multiple communication formats simultaneously** — executive emails, Slack updates, and Notion documents.
+These standalone Claude Code skills complement AI PM OS:
 
-**Available styles:**
-| Style | Purpose | Length |
-| --- | --- | --- |
-| Executive Email | Strategic update for leadership with business impact | 3 paragraphs |
-| Slack Update | Quick team update, easy to scan | 2-4 lines |
-| Notion Document | Comprehensive async reference with full context | 300-600 words |
-
-**How it works:** Can spin up three parallel agents and each produce output in their respective style. All three outputs are returned in a single file, back to back.
-
-**Usage:**
-```bash
-claude
-# Provide your content, then ask:
-# "Communicate this across all three styles and add the updates in one file"
-```
+| Skill | What it does |
+| --- | --- |
+| [/communicate](https://github.com/101WaysToBug/communicate) | Transforms content into Executive Email, Slack Update, Notion Doc, or Release Notes |
+| [/one-pager-PRD](https://github.com/101WaysToBug/one-pager-PRD) | Generates a one-pager PRD using Lenny Rachitsky's framework |
 
 ## Workflow
 
@@ -118,7 +107,7 @@ User Feedback (tickets, notes, surveys, sales)
 Any Content (findings, updates, decisions)
         |
         v
-[Communication Styles] --> Executive Email + Slack + Notion (one file)
+[/communicate skill]  --> Executive Email + Slack + Notion + Release Notes
         |
         v
    PM Review --> Share with Stakeholders
@@ -149,13 +138,13 @@ company_context/
 
 **To adapt AI PM OS to your own company:**
 
-1. **Create ****`company_context/company.md`** — Describe your company: what it does, core platform capabilities, your role, company stage (funding, ARR, team size, customer count).
+1. **Create \****`company_context/company.md`** — Describe your company: what it does, core platform capabilities, your role, company stage (funding, ARR, team size, customer count).
 
-2. **Create ****`company_context/persona.md`** — Define 4-6 user personas relevant to your product area. For each persona include: role, company size, what they care about, pain points, and a representative quote.
+2. **Create \****`company_context/persona.md`** — Define 4-6 user personas relevant to your product area. For each persona include: role, company size, what they care about, pain points, and a representative quote.
 
-3. **Create ****`company_context/product.md`** — Document the specific feature(s) you own: capabilities, user flows, restrictions, pricing, analytics, and key use cases. Source this from your product's support docs, help center, or internal specs.
+3. **Create \****`company_context/product.md`** — Document the specific feature(s) you own: capabilities, user flows, restrictions, pricing, analytics, and key use cases. Source this from your product's support docs, help center, or internal specs.
 
-4. **Each tool's ****`CLAUDE.md`**** loads this context automatically** at the start of every session. The instruction at the top of each `CLAUDE.md` tells Claude Code to read all three files before beginning any task:
+4. **Each tool's \****`CLAUDE.md`**\*\* loads this context automatically** at the start of every session. The instruction at the top of each `CLAUDE.md` tells Claude Code to read all three files before beginning any task:
 
    > Before starting any task, load the company context from `../company_context/company.md`, `../company_context/persona.md`, and `../company_context/product.md`.
 

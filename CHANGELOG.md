@@ -1,6 +1,16 @@
 # Changelog
 
-## 2026-03-06
+## 2026-03-06 (v0.3.0)
+
+### Removed
+- **`communication-styles/`** — Extracted into a standalone Claude Code skill ([/communicate](https://github.com/101WaysToBug/communicate)). The skill supports 4 styles (Executive Email, Slack Update, Notion Document, Release Notes) with interactive style selection.
+
+### Changed
+- **`README.md`** — Replaced Communication Styles tool section with a "Companion Skills" table linking to `/communicate` and `/one-pager-PRD`. Updated workflow diagram to reference the `/communicate` skill.
+
+---
+
+## 2026-03-06 (v0.2.0)
 
 ### Added
 - **`communication-styles/style-release-notes.md`** — Release notes communication style template for announcing changes to users and stakeholders (structured, neutral, value-focused)

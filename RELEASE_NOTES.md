@@ -27,11 +27,12 @@ A feedback synthesis tool that transforms raw user feedback into structured insi
 
 ## New: Communication Styles (`communication-styles/`)
 
-Three templates for transforming any content into stakeholder-ready formats. Supports parallel execution to produce all three outputs at once.
+Four templates for transforming any content into stakeholder-ready formats. Supports parallel execution to produce all outputs at once.
 
 - **Executive Email** — 3-paragraph strategic update for leadership with business impact and recommendations
 - **Slack Update** — 2-4 line quick team update, casual and scannable
 - **Notion Document** — Comprehensive async reference document with full context and supporting details
+- **Release Notes** — Structured release announcement for users/stakeholders with clear sections for new, improved, fixed, changed, deprecated, and removed items
 
 ## Changed: Segmentation Dimensions
 

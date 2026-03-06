@@ -3,6 +3,7 @@
 ## 2026-03-06
 
 ### Added
+- **`communication-styles/style-release-notes.md`** — Release notes communication style template for announcing changes to users and stakeholders (structured, neutral, value-focused)
 - **`company_context/`**** directory** — Centralized shared context loaded by all tools at session start
   - `company.md` — Wati company overview, platform capabilities, role, and company stage
   - `persona.md` — 6 user personas (Priya, Rahul, Anita, David, Neha, Vijay)
@@ -28,5 +29,5 @@
 - **Segmentation dimensions** updated across all tools to match:
   - ACV Band: $0–1K, $1K–3K, $3K–5K, $5K-10K, $10K+
   - Region: India, ROW, LATAM, GCR, Europe
-- **Parent ****`README.md`** — Replaced old "Customization" section with "Setting Up Your Company Context" + "Further Customization"
+- **Parent \****`README.md`** — Replaced old "Customization" section with "Setting Up Your Company Context" + "Further Customization"
 - **Nugget synthesizer source references** — Fixed stale paths (`survey-results.csv` → `surveys/`, `sales-notes.md` → `sales-notes/`) to match actual directory structure

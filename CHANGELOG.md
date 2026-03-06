@@ -3,7 +3,7 @@
 ## 2026-03-06
 
 ### Added
-- **`company_context/` directory** — Centralized shared context loaded by all tools at session start
+- **`company_context/`**** directory** — Centralized shared context loaded by all tools at session start
   - `company.md` — Wati company overview, platform capabilities, role, and company stage
   - `persona.md` — 6 user personas (Priya, Rahul, Anita, David, Neha, Vijay)
   - `product.md` — Deep-dive on WhatsApp Business Calling and Voice AI (Astra), sourced from all 8 Wati support articles: capabilities, call flows, restrictions, pricing, analytics, Request Accepted view, call permission template localization, voice call CTA, and call availability/notifications
@@ -15,6 +15,11 @@
 - **Execution Protocol** in nugget-synthesizer `CLAUDE.md` — Explicit 4-step instructions (load context, check sources, launch 4 parallel Task agents, consolidate) so Claude Code automatically spins up agents on synthesize requests
 - **"Setting Up Your Company Context"** section in parent `README.md` — Step-by-step guide for PMs to create their own `company_context/` folder
 - **Nugget Synthesizer** listed as tool #3 in parent `README.md` with description, usage, and updated workflow diagram
+- **`communication-styles/`** — Three parallel communication style templates for transforming any content into stakeholder-ready formats
+  - `style-executive-email.md` — Strategic 3-paragraph email for leadership (professional, data-driven, outcome-focused)
+  - `style-slack-update.md` — Quick 2-4 line team update (casual, scannable, with emojis)
+  - `style-notion-doc.md` — Comprehensive async reference document (detailed, well-organized, standalone)
+- **Communication Styles** listed as tool #4 in parent `README.md` with usage, style table, and updated workflow diagram
 
 ### Changed
 - **Company context loading** — Changed all 3 CLAUDE.md files to load context **once at session start** instead of before every task, to reduce token usage
@@ -23,5 +28,5 @@
 - **Segmentation dimensions** updated across all tools to match:
   - ACV Band: $0–1K, $1K–3K, $3K–5K, $5K-10K, $10K+
   - Region: India, ROW, LATAM, GCR, Europe
-- **Parent `README.md`** — Replaced old "Customization" section with "Setting Up Your Company Context" + "Further Customization"
+- **Parent ****`README.md`** — Replaced old "Customization" section with "Setting Up Your Company Context" + "Further Customization"
 - **Nugget synthesizer source references** — Fixed stale paths (`survey-results.csv` → `surveys/`, `sales-notes.md` → `sales-notes/`) to match actual directory structure

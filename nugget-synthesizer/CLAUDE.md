@@ -1,6 +1,6 @@
 # User Feedback Synthesizer
 
-> **Before starting any task, load the company context from \****`../company_context/company.md`***\*, \****`../company_context/persona.md`***\*, and \****`../company_context/product.md`**\*\*.**
+> **At the start of each session, load the company context once from ****`../company_context/company.md`****, ****`../company_context/persona.md`****, and ****`../company_context/product.md`****. Do not re-read these files for subsequent tasks within the same session.**
 
 ## What This Project Does
 

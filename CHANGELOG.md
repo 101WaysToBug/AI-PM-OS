@@ -17,6 +17,7 @@
 - **Nugget Synthesizer** listed as tool #3 in parent `README.md` with description, usage, and updated workflow diagram
 
 ### Changed
+- **Company context loading** — Changed all 3 CLAUDE.md files to load context **once at session start** instead of before every task, to reduce token usage
 - **All 3 CLAUDE.md files** now load `company_context/company.md`, `persona.md`, and `product.md` at session start
 - **Extracted** Product Context and User Personas from `metrics_and_goals_generator/CLAUDE.md`, `task_generator/CLAUDE.md`, and `nugget-synthesizer/CLAUDE.md` into shared `company_context/` files (removed duplicated sections)
 - **Segmentation dimensions** updated across all tools to match:

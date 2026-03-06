@@ -1,6 +1,6 @@
 # AI PM OS
 
-AI-powered tools that turn a Product Manager into an AI-Assisted Product Manager. Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code), these tools automate repetitive PM workflows — from generating analytics metric sheets to drafting JIRA/YouTrack tickets — so PMs can focus on strategy instead of formatting.
+AI-powered tools that turn a Product Manager into an AI-Assisted Product Manager. Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code), these tools automate repetitive PM workflows — from generating analytics metric sheets to synthesizing user feedback — so PMs can focus on strategy instead of formatting.
 
 ## Tools
 
@@ -25,31 +25,7 @@ claude
 
 Output is saved as markdown to `metrics/FEATURE-NAME-TRACKING.md`.
 
-### 2. Task/Ticket Generator
-
-Converts metric sheets, PRDs, or Notion documents into **execution-ready tickets** with testable acceptance criteria.
-
-**Supported ticket prefixes:**
-| Prefix | Team |
-| --- | --- |
-| `[Data]` | Data/Analytics |
-| `[Eng]` | Backend Engineering |
-| `[FE]` | Frontend |
-| `[Design]` | Design |
-| `[DevOps]` | Infrastructure |
-| `[QA]` | Quality Assurance |
-
-**Usage:**
-```bash
-cd task_generator
-claude
-# Provide a source document (metric sheet, PRD, or Notion link), then ask:
-# "Create a [Data] ticket to build the dashboard for this metric sheet"
-```
-
-Tickets are always created as **drafts first** so the PM can review before sharing with the team.
-
-### 3. Nugget Synthesizer
+### 2. Nugget Synthesizer
 
 Transforms raw user feedback — support tickets, meeting notes, survey responses, and sales notes — into structured **insight reports** with cross-source analysis.
 
@@ -80,6 +56,7 @@ These standalone Claude Code skills complement AI PM OS:
 | Skill | What it does |
 | --- | --- |
 | [/communicate](https://github.com/101WaysToBug/communicate) | Transforms content into Executive Email, Slack Update, Notion Doc, or Release Notes |
+| [/generate-ticket](https://github.com/101WaysToBug/generate-ticket) | Generates structured project tickets (YouTrack/JIRA) from user stories, PRDs, or metric sheets |
 | [/one-pager-PRD](https://github.com/101WaysToBug/one-pager-PRD) | Generates a one-pager PRD using Lenny Rachitsky's framework |
 
 ## Workflow
@@ -91,7 +68,7 @@ User Stories / PRD
 [Metrics Generator] --> metrics/FEATURE-TRACKING.md
         |
         v
-[Task Generator]    --> Draft Ticket (YouTrack / JIRA)
+[/generate-ticket]  --> Draft Ticket (YouTrack / JIRA)
         |
         v
    PM Review --> Publish to Team

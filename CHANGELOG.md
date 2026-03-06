@@ -4,9 +4,10 @@
 
 ### Removed
 - **`communication-styles/`** — Extracted into a standalone Claude Code skill ([/communicate](https://github.com/101WaysToBug/communicate)). The skill supports 4 styles (Executive Email, Slack Update, Notion Document, Release Notes) with interactive style selection.
+- **`task_generator/`** — Extracted into a standalone Claude Code skill ([/generate-ticket](https://github.com/101WaysToBug/generate-ticket)). The skill takes user stories, PRDs, or metric sheets as input and generates structured tickets with team prefix selection.
 
 ### Changed
-- **`README.md`** — Replaced Communication Styles tool section with a "Companion Skills" table linking to `/communicate` and `/one-pager-PRD`. Updated workflow diagram to reference the `/communicate` skill.
+- **`README.md`** — Removed Communication Styles and Task Generator tool sections. Added both as companion skills in the "Companion Skills" table alongside `/one-pager-PRD`. Updated workflow diagram to reference `/communicate` and `/generate-ticket` skills.
 
 ---
 

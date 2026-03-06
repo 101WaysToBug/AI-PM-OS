@@ -84,13 +84,13 @@ Transforms any content (research findings, feature updates, status reports) into
 | Slack Update | Quick team update, easy to scan | 2-4 lines |
 | Notion Document | Comprehensive async reference with full context | 300-600 words |
 
-**How it works:** Three parallel agents each produce output in their respective style. All three outputs are returned in a single file, back to back.
+**How it works:**  up three parallel agents and each produce output in their respective style. All three outputs are returned in a single file, back to back.
 
 **Usage:**
 ```bash
 claude
 # Provide your content, then ask:
-# "Communicate this across all three styles"
+# "Communicate this across all three styles and add the updates in one file"
 ```
 
 ## Workflow
@@ -114,6 +114,14 @@ User Feedback (tickets, notes, surveys, sales)
         |
         v
    PM Review --> Inform Roadmap
+
+Any Content (findings, updates, decisions)
+        |
+        v
+[Communication Styles] --> Executive Email + Slack + Notion (one file)
+        |
+        v
+   PM Review --> Share with Stakeholders
 ```
 
 ## Integrations

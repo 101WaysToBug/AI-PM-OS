@@ -98,6 +98,7 @@ Any Content (findings, updates, decisions)
 
 ## Prerequisites
 
+- A paid [Claude](https://claude.ai) subscription (Pro, Max, Team, or Enterprise) — Claude Code is not available on the free plan
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed and authenticated
 - (Optional) Notion MCP configured for fetching source documents
 - (Optional) YouTrack MCP configured for ticket creation

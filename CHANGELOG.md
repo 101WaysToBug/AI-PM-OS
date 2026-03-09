@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-03-09 (v0.4.0)
+
+### Added
+- **`competition_researcher/`** — New competitive intelligence tool with parallel agent architecture
+  - `CLAUDE.md` — Full interactive execution protocol: loads company context, asks for research domain, checks existing competitor profiles, launches N parallel research agents, runs a review/correction loop, and generates the landscape matrix
+  - `README.md` — Tool overview, architecture, usage guide, and project structure
+  - `competitors/` — Six competitor briefs (Respond.io, Infobip, Twilio, Zendesk, AiSensy, Interakt) researching WhatsApp Calling, Voice AI, call recording, AI transcription/summaries, and mobile app calling
+  - `insights/competitive_landscape_matrix.md` — Consolidated matrix with feature comparison, pricing analysis, universal market gaps, strategic positioning, top opportunities, product priorities, and threat summary
+- **Interactive correction loop** in `competition_researcher/CLAUDE.md` — After research completes, Claude asks the user to flag inaccuracies and accepts URLs to self-correct findings before generating the matrix
+- **Parallel agent protocol** — Competition Researcher launches one `general-purpose` subagent per competitor simultaneously in a single Task tool call block
+
+### Changed
+- **`README.md`** — Added Competition Researcher as Tool #1 with description, usage, and updated workflow diagram showing the competitive research → landscape matrix flow
+
+---
+
 ## 2026-03-06 (v0.3.0)
 
 ### Removed

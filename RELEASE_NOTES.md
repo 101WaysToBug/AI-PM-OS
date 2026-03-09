@@ -1,3 +1,42 @@
+# Release Notes — v0.4.0 (2026-03-09)
+
+## Summary
+
+AI PM OS adds **Competition Researcher** — a Claude Code-powered tool that conducts deep competitive intelligence on any feature or product domain using parallel AI agents, and synthesizes findings into a structured competitive landscape matrix.
+
+---
+
+## New: Competition Researcher
+
+Competition Researcher automates the most time-consuming parts of competitive analysis. Describe the feature domain you care about, point it at your competitors, and it does the rest — deep web research, structured briefs, and a consolidated matrix ready for roadmap and positioning decisions.
+
+- Launches **one research agent per competitor in parallel** — no waiting for each to finish before the next starts
+- Each agent searches product pages, pricing, docs, changelogs, G2/Capterra reviews, blog posts, and app store listings
+- Outputs a **structured competitor brief** per company covering: features, pricing tiers, target market, strengths, weaknesses, and a direct head-to-head comparison to your product
+- Distinguishes between **GA features**, **beta/EAP**, and **announced-but-not-shipped** — writes "Not publicly documented" rather than guessing
+- Includes a built-in **review and correction loop** — after research completes, flag inaccuracies and provide URLs for the tool to self-correct
+- Generates a **competitive landscape matrix** at `insights/competitive_landscape_matrix.md` covering feature comparison, pricing analysis, universal market gaps, strategic positioning, and ranked product opportunities
+
+## New: Interactive Session Workflow
+
+The tool guides you through each research run conversationally:
+
+1. Asks which feature/domain to research
+2. Checks `competitors/` for existing profiles — reuses them and asks if you want to add more
+3. Launches all competitor agents simultaneously
+4. Prompts for a gap-check and correction pass before finalizing
+5. Builds the landscape matrix only after you sign off on the briefs
+
+## Changed: README
+
+The root `README.md` now lists Competition Researcher as Tool #1 and includes an updated workflow diagram showing the competitive research → landscape matrix flow.
+
+---
+
+*Part of [AI PM OS](https://github.com/101WaysToBug/AI-PM-OS) — AI-powered tools for Product Managers built on Claude Code.*
+
+---
+
 # Release Notes — v0.3.0 (2026-03-06)
 
 ## Summary

@@ -4,7 +4,30 @@ AI-powered tools that turn a Product Manager into an AI-Assisted Product Manager
 
 ## Tools
 
-### 1. Metrics & Goals Generator
+### 1. Competition Researcher
+
+Conducts deep competitive intelligence on any feature or product domain. Launches **parallel AI agents** — one per competitor — to build structured competitor briefs from live web research, then synthesizes everything into a competitive landscape matrix.
+
+**What it generates:**
+- **Competitor Briefs** — features, pricing, target market, strengths, weaknesses, and a direct comparison to your product for each competitor
+- **Competitive Landscape Matrix** — feature comparison table, pricing analysis, universal market gaps, strategic positioning, ranked opportunities, and product priorities
+
+**How it works:** N parallel agents (one per competitor) each do deep web research across product pages, pricing, docs, changelogs, G2/Capterra reviews, and public roadmaps. After research, an interactive review loop lets you correct findings using URLs before the final matrix is generated.
+
+**Usage:**
+```bash
+cd competition_researcher
+claude
+# Follow the interactive prompts:
+# 1. Describe the feature/domain to research
+# 2. Provide competitors (or use existing profiles)
+# 3. Review findings, correct errors, add missing features
+# 4. Get the consolidated landscape matrix
+```
+
+Output is saved to `competitors/COMPETITOR-NAME.md` and `insights/competitive_landscape_matrix.md`.
+
+### 2. Metrics & Goals Generator
 
 Transforms user stories and feature specs into structured **feature metric sheets** ready for engineering and data teams.
 
@@ -25,7 +48,7 @@ claude
 
 Output is saved as markdown to `metrics/FEATURE-NAME-TRACKING.md`.
 
-### 2. Nugget Synthesizer
+### 3. Nugget Synthesizer
 
 Transforms raw user feedback — support tickets, meeting notes, survey responses, and sales notes — into structured **insight reports** with cross-source analysis.
 
@@ -80,6 +103,17 @@ User Feedback (tickets, notes, surveys, sales)
         |
         v
    PM Review --> Inform Roadmap
+
+Feature or Domain to Research
+        |
+        v
+[Competition Researcher] --> competitors/COMPETITOR.md (x N, in parallel)
+        |
+        v
+insights/competitive_landscape_matrix.md
+        |
+        v
+   PM Review --> Inform Roadmap + Positioning
 
 Any Content (findings, updates, decisions)
         |

@@ -22,6 +22,7 @@ An AI-powered PRD writing assistant built on [Claude Code](https://docs.anthropi
 
 ```bash
 claude
+help we write a PRD once the claude session starts 
 # Claude will:
 # 1. Load company, product, and persona context
 # 2. Show feature ideas with customer evidence + competitive rationale

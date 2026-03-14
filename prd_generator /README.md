@@ -21,7 +21,6 @@ An AI-powered PRD writing assistant built on [Claude Code](https://docs.anthropi
 ## Usage
 
 ```bash
-cd "prd_generator "
 claude
 # Claude will:
 # 1. Load company, product, and persona context

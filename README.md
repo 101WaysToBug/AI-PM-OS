@@ -50,7 +50,7 @@ claude
 
 Output is saved to `competitors/COMPETITOR-NAME.md` and `insights/competitive_landscape_matrix.md`.
 
-### 2. Metrics & Goals Generator
+### 3. Metrics & Goals Generator
 
 Transforms user stories and feature specs into structured **feature metric sheets** ready for engineering and data teams.
 
@@ -71,7 +71,7 @@ claude
 
 Output is saved as markdown to `metrics/FEATURE-NAME-TRACKING.md`.
 
-### 3. Nugget Synthesizer
+### 4. Nugget Synthesizer
 
 Transforms raw user feedback — support tickets, meeting notes, survey responses, and sales notes — into structured **insight reports** with cross-source analysis.
 

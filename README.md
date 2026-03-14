@@ -16,7 +16,7 @@ Guides PMs from raw idea to polished PRD through structured Socratic questioning
 
 **Usage:**
 ```bash
-cd "prd_generator "
+cd prd_generator
 claude
 # Follow the interactive prompts:
 # 1. Choose a feature topic from available insights (or describe your own)

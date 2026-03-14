@@ -20,21 +20,45 @@ Do not proceed to PRD generation without loading these. They inform tone, framin
 
 ### Step 1 — Surface Feature Ideas
 
-Check both insight sources in parallel:
+Load both insight sources in parallel before presenting anything to the user:
 
-1. **Nugget Synthesizer:** `../nugget-synthesizer/insights/` — look for `*-synthesis.md` files, each represents a synthesized topic from user research
-2. **Competition Researcher:** `../competition_researcher/insights/` — look for `competitive_landscape_matrix.md` and any competitor briefs
+1. **Nugget Synthesizer:** `../nugget-synthesizer/insights/` — read all `*-synthesis.md` files; each represents a synthesized topic from user research
+2. **Competition Researcher:** `../competition_researcher/insights/competitive_landscape_matrix.md` — always read this file; it is required for every session, not optional
 
-Present the user with a numbered list of available topics/feature ideas drawn from these sources. If both folders are empty or have no relevant content, either:
+Synthesize both sources together. Then present the user with a numbered list of feature ideas. Under each option, include a short rationale (2–4 sentences) that weaves together:
+- The customer evidence from the synthesis file (pain point frequency, key quotes, customer names)
+- The competitive signal from the landscape matrix (who has it, who doesn't, what the gap or threat is)
+
+Format each option like this:
+
+```
+1. **Feature Name**
+   <Customer evidence: what pain was surfaced, how many customers, any direct quotes>
+   <Competitive signal: which competitors have this, what Wati's gap or opportunity is>
+```
+
+If both folders are empty or have no relevant content:
 - Ask the user to share a short write-up on the feature they want to PRD
-- Offer 3–5 feature ideas grounded in the loaded product context and personas
+- Offer 3–5 feature ideas grounded in the loaded product context and personas, with the same rationale format above
+
+**After presenting the list, ask only one question:**
+> "Which of these do you want to PRD? Enter a number to select, or type your own."
+
+Wait for the user to select a feature before proceeding to Step 2.
 
 ### Step 2 — Choose a PRD Template
 
-If the user has not specified a format, ask them to choose between the two templates in `prd-templates/`:
+After the user has selected a feature, ask only one question:
+> "Which PRD template do you want to use? Enter a number to select."
 
-- **Lenny's PRD Template** (`Lennys-PRD-Template.md`) — Lightweight, 7-section format. Best for early-stage features or quick alignment docs.
-- **Carl's PRD Template** (`Carls-PRD-Template.md`) — Structured, two-phase format (Problem Alignment → Solution Alignment). Best for complex features requiring cross-functional alignment.
+Present the two options:
+
+```
+1. Lenny's PRD Template — Lightweight, 7-section format. Best for early-stage features or quick alignment docs.
+2. Carl's PRD Template — Structured, two-phase format (Problem Alignment → Solution Alignment). Best for complex features requiring cross-functional alignment.
+```
+
+Wait for the user to select a template before proceeding to Step 3.
 
 ### Step 3 — Socratic Questioning
 
@@ -45,7 +69,27 @@ Before drafting, use `frameworks/socratic-questioning.md` to ask the user 3–5 
 - End with **Strategic Fit** (why now, why this?)
 - Pick only the most relevant questions — quality over quantity
 - Be a thought partner, not an interrogator
-- If the user struggles to answer a question or says they're unsure, offer 2–3 concrete answer options grounded in the loaded company/product/persona context for them to choose from or react to
+
+**Critical: ask one question at a time.** Do not batch multiple questions in a single message. Wait for the user's answer before asking the next question.
+
+For each question, always present 2–3 concrete answer options grounded in the loaded company/product/persona context. Format them as a selectable list:
+
+```
+<Question text>
+
+1. <Option A — concise label>
+   <1-sentence explanation of what this means or implies>
+
+2. <Option B — concise label>
+   <1-sentence explanation>
+
+3. <Option C — concise label>
+   <1-sentence explanation>
+
+Enter a number to select — or type your own answer.
+```
+
+Always include the note "or type your own answer" so the user knows they are not constrained to the options shown.
 
 Use the user's answers to ground the PRD in evidence, not assumptions.
 

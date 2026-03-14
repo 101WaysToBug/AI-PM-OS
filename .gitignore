@@ -1,1 +1,12 @@
 .DS_Store
+
+# Sensitive research & output files — do not commit
+nugget-synthesizer/insights/*
+!nugget-synthesizer/insights/.gitkeep
+
+competition_researcher/competitors/*
+competition_researcher/insights/*
+
+metrics_and_goals_generator/metrics/*
+
+prd_generator\ /prd/*

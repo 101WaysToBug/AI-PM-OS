@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-03-14 (v0.5.0)
+
+### Added
+- **`prd_generator/`** — New PRD writing assistant with interactive Socratic questioning workflow
+  - `CLAUDE.md` — Full session protocol: loads company context, surfaces feature ideas from nugget-synthesizer and competition researcher, prompts for template selection, runs Socratic questioning (with 2–3 answer options when user is stuck), and saves PRD output
+  - `README.md` — Tool overview, workflow, template comparison table, directory structure, and dependencies
+  - `prd-templates/Lennys-PRD-Template.md` — Lenny Rachitsky's lightweight 7-section PRD template
+  - `prd-templates/Carls-PRD-Template.md` — Carl's two-phase Problem Alignment → Solution Alignment → Launch Planning template
+  - `frameworks/socratic-questioning.md` — Five-category questioning framework (Problem Clarity, Solution Validation, Success Criteria, Constraints, Strategic Fit) with coaching guidance and red flag detection
+- **Socratic answer scaffolding** — When a PM can't answer a question, Claude offers 2–3 concrete options grounded in company/product/persona context to react to
+
+### Changed
+- **`README.md`** — Added PRD Generator as Tool #1 with description, usage, and updated workflow diagram showing the full research → PRD → metrics → ticket pipeline
+
+---
+
 ## 2026-03-09 (v0.4.0)
 
 ### Added

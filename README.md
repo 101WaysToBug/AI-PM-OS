@@ -4,7 +4,30 @@ AI-powered tools that turn a Product Manager into an AI-Assisted Product Manager
 
 ## Tools
 
-### 1. Competition Researcher
+### 1. PRD Generator
+
+Guides PMs from raw idea to polished PRD through structured Socratic questioning and evidence from your existing research tools. Loads company context automatically, surfaces feature ideas from the Nugget Synthesizer and Competition Researcher, and writes the PRD using your template of choice.
+
+**What it generates:**
+- **Structured PRD** — using Lenny Rachitsky's lightweight 7-section template or Carl's two-phase Problem/Solution Alignment template
+- **Evidence-grounded sections** — drawn from nugget-synthesizer insights and competitive research, not written from scratch
+
+**How it works:** Loads company context, presents available feature topics from insight folders, runs a Socratic questioning session (3–5 questions with answer options if you're stuck), then drafts and saves the PRD.
+
+**Usage:**
+```bash
+cd "prd_generator "
+claude
+# Follow the interactive prompts:
+# 1. Choose a feature topic from available insights (or describe your own)
+# 2. Pick a PRD template (Lenny's or Carl's)
+# 3. Answer 3–5 Socratic questions to sharpen the PRD
+# 4. Get a complete, evidence-backed PRD
+```
+
+Output is saved to `prd_generator /prd/FEATURE-NAME-prd.md`.
+
+### 2. Competition Researcher
 
 Conducts deep competitive intelligence on any feature or product domain. Launches **parallel AI agents** — one per competitor — to build structured competitor briefs from live web research, then synthesizes everything into a competitive landscape matrix.
 
@@ -85,7 +108,25 @@ These standalone Claude Code skills complement AI PM OS:
 ## Workflow
 
 ```
-User Stories / PRD
+User Feedback (tickets, notes, surveys, sales)
+        |
+        v
+[Nugget Synthesizer] --> insights/TOPIC-synthesis.md
+        |
+        v
+Feature or Domain to Research
+        |
+        v
+[Competition Researcher] --> competitors/COMPETITOR.md (x N, in parallel)
+        |
+        v
+insights/competitive_landscape_matrix.md
+        |
+        v
+[PRD Generator] --> prd/FEATURE-NAME-prd.md
+        |
+        v
+   PM Review --> Socratic Q&A --> Final PRD
         |
         v
 [Metrics Generator] --> metrics/FEATURE-TRACKING.md
@@ -95,14 +136,6 @@ User Stories / PRD
         |
         v
    PM Review --> Publish to Team
-
-User Feedback (tickets, notes, surveys, sales)
-        |
-        v
-[Nugget Synthesizer] --> insights/TOPIC-synthesis.md
-        |
-        v
-   PM Review --> Inform Roadmap
 
 Feature or Domain to Research
         |

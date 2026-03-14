@@ -1,3 +1,43 @@
+# Release Notes — v0.5.0 (2026-03-14)
+
+## Summary
+
+AI PM OS adds **PRD Generator** — an interactive PRD writing assistant that guides PMs from raw feature idea to structured, evidence-backed PRD through Socratic questioning, using your existing research tools as input.
+
+---
+
+## New: PRD Generator
+
+PRD Generator removes the blank-page problem. It loads your company context, surfaces feature ideas from the Nugget Synthesizer and Competition Researcher, and guides you through a structured dialogue before writing a single word of the PRD.
+
+- Reads `company_context/`, `nugget-synthesizer/insights/`, and `competition_researcher/insights/` at session start — no copy-pasting context
+- Presents available feature topics from your insight files; falls back to asking for a brief if folders are empty
+- Prompts template selection between two formats: **Lenny's PRD** (lightweight, 7 sections) or **Carl's PRD** (two-phase Problem/Solution Alignment)
+- Runs **3–5 Socratic questions** before drafting — covering problem clarity, solution rationale, success criteria, constraints, and strategic fit
+- **Offers 2–3 answer options** when a PM is unsure, so the session never stalls
+- Saves output to `prd/FEATURE-NAME-prd.md`, creating the folder if it doesn't exist
+
+## New: Socratic Questioning Framework
+
+The `frameworks/socratic-questioning.md` file defines five question categories with guidance on how to pick the right questions, what red flags to listen for, and how to coach PMs through weak answers. The goal is a thought partner, not an interrogator.
+
+After questioning, the PM has:
+- A clear, specific problem statement with evidence
+- Justification for why this solution, not another
+- Concrete success criteria (quantitative + qualitative)
+- Explicit scope boundaries
+- A strategic narrative for why this matters now
+
+## Changed: README + Workflow Diagram
+
+The root `README.md` now lists PRD Generator as Tool #1 and includes an updated end-to-end workflow diagram showing the full pipeline: research → PRD → metrics → ticket.
+
+---
+
+*Part of [AI PM OS](https://github.com/101WaysToBug/AI-PM-OS) — AI-powered tools for Product Managers built on Claude Code.*
+
+---
+
 # Release Notes — v0.4.0 (2026-03-09)
 
 ## Summary
